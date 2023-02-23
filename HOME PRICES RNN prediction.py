@@ -78,7 +78,7 @@ criterion = nn.MSELoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
 #print(model)
-epochs = 25
+epochs = 30
 
 import time
 
@@ -99,7 +99,6 @@ for epoch in range(epochs):
         loss.backward()
         optimizer.step()
 
-    # print training result
     print(f'Epoch: {epoch + 1:2} Loss: {loss.item():10.8f}')
 
 print(f'\nDuration: {time.time() - start_time:.0f} seconds')
